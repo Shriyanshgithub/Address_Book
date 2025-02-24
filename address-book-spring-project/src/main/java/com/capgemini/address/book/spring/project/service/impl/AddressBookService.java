@@ -1,14 +1,16 @@
 package com.capgemini.address.book.spring.project.service.impl;
 
 import com.capgemini.address.book.spring.project.dto.AddressBookDto;
+import com.capgemini.address.book.spring.project.model.AddressBookEntity;
 import com.capgemini.address.book.spring.project.service.IAddressBookService;
 import org.springframework.stereotype.Service;
 
 @Service
 public class AddressBookService implements IAddressBookService {
+
     
     @Override
-    public AddressBookDto addressBook(AddressBookDto addressBookDto) {
+    public AddressBookDto addressBook(AddressBookEntity addressBookEntity) {
         return null;
     }
 
@@ -18,7 +20,7 @@ public class AddressBookService implements IAddressBookService {
     }
 
     @Override
-    public AddressBookDto updateAddressBook(AddressBookDto addressBookDto) {
+    public AddressBookDto updateAddressBook(AddressBookEntity addressBookEntity) {
         return null;
     }
 
