@@ -9,8 +9,8 @@ public class AddressBookDtoMapper {
 
     public static AddressBookEntity mapToAddressBook(AddressBookDto addressBookDto){
         AddressBookEntity addressBookEntity = new AddressBookEntity();
-        addressBookEntity.setAddress(addressBookDto.address());
-        addressBookEntity.setName(addressBookDto.name());
+        addressBookEntity.setAddress(addressBookDto.getAddress());
+        addressBookEntity.setName(addressBookDto.getName());
         return addressBookEntity;
     }
 }
