@@ -1,0 +1,11 @@
+logging:
+  level:
+    root: INFO
+    com.capgemini.address_book.service: ERROR
+    com.capgemini.address_book.controller: WARN
+    com.capgemini.address_book.entity : WARN
+  file:
+    name: logs/application.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %level - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
