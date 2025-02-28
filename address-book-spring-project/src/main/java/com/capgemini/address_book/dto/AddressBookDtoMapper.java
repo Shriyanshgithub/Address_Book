@@ -1,6 +1,6 @@
-package com.capgemini.address.book.spring.project.dto;
+package com.capgemini.address_book.dto;
 
-import com.capgemini.address.book.spring.project.model.AddressBookEntity;
+import com.capgemini.address_book.model.AddressBookEntity;
 
 public class AddressBookDtoMapper {
     public static AddressBookDto mapToAddressBookDto(AddressBookEntity addressBookEntity){

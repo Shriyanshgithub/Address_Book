@@ -1,4 +1,4 @@
-package com.capgemini.address.book.spring.project.model;
+package com.capgemini.address_book.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

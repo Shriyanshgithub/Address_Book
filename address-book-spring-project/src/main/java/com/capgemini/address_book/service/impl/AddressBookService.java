@@ -1,10 +1,11 @@
-package com.capgemini.address.book.spring.project.service.impl;
+package com.capgemini.address_book.service.impl;
 
-import com.capgemini.address.book.spring.project.dto.AddressBookDto;
-import com.capgemini.address.book.spring.project.dto.AddressBookDtoMapper;
-import com.capgemini.address.book.spring.project.model.AddressBookEntity;
-import com.capgemini.address.book.spring.project.repository.AddressBookRepository;
-import com.capgemini.address.book.spring.project.service.IAddressBookService;
+import com.capgemini.address_book.dto.AddressBookDto;
+import com.capgemini.address_book.dto.AddressBookDtoMapper;
+import com.capgemini.address_book.model.AddressBookEntity;
+import com.capgemini.address_book.repository.AddressBookRepository;
+import com.capgemini.address_book.service.IAddressBookService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

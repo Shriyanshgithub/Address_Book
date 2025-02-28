@@ -1,4 +1,4 @@
-package com.capgemini.address.book.spring.project;
+package com.capgemini.address_book;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

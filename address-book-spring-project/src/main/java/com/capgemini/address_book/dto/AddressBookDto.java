@@ -1,4 +1,4 @@
-package com.capgemini.address.book.spring.project.dto;
+package com.capgemini.address_book.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
