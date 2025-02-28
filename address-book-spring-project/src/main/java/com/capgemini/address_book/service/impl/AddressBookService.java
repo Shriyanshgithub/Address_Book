@@ -2,6 +2,8 @@ package com.capgemini.address_book.service.impl;
 
 import com.capgemini.address_book.dto.AddressBookDto;
 import com.capgemini.address_book.dto.AddressBookDtoMapper;
+import com.capgemini.address_book.exception.AddressBookAlreadyExitsException;
+import com.capgemini.address_book.exception.AddressBookNotFoundException;
 import com.capgemini.address_book.model.AddressBookEntity;
 import com.capgemini.address_book.repository.AddressBookRepository;
 import com.capgemini.address_book.service.IAddressBookService;
@@ -23,13 +25,20 @@ public class AddressBookService implements IAddressBookService {
     
     @Override
     public AddressBookDto addressBook(AddressBookEntity addressBookEntity) {
+        if(addressBookRepository.existsById(addressBookEntity.getId())){
+            throw new AddressBookAlreadyExitsException("AddressBook already exists!");
+        }
         AddressBookEntity addAddressBook1 = addressBookRepository.save(addressBookEntity);
         return AddressBookDtoMapper.mapToAddressBookDto(addAddressBook1);
     }
 
     @Override
     public AddressBookDto getAddressBook(Long id) {
-        AddressBookEntity getAddressBook = addressBookRepository.findById(id).orElseThrow ();
+        if(id<1){
+            throw new IllegalArgumentException("Invalid ID");
+        }
+        AddressBookEntity getAddressBook = addressBookRepository.findById(id)
+                .orElseThrow (() -> new AddressBookNotFoundException("AddressBook not found"));
         return AddressBookDtoMapper.mapToAddressBookDto(getAddressBook);
 
     }
